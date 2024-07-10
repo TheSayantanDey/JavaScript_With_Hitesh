@@ -1,6 +1,6 @@
 // array
 
-const myArr = [0, 1, 2, 3, 4, 5]
+const myArr = [0, 1, 2, "three", 4, 5 , false]
 const myHeors = ["shaktiman", "naagraj"]
 
 const myArr2 = new Array(1, 2, 3, 4)
