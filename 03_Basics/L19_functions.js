@@ -41,7 +41,7 @@ function loginUserMessage(username = "sam"){ //Default value to the parameter
 
 // ------------------------------------------------------------------
 // L20
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){ //Here ... is rest operator
     return num1
 }
 
@@ -52,11 +52,13 @@ const user = {
     prices: 199
 }
 
+//Passing object to a function
 function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
 // handleObject(user)
+//Passing object in a different way as an argument
 handleObject({
     username: "sam",
     price: 399
@@ -68,5 +70,6 @@ function returnSecondValue(getArray){
     return getArray[1]
 }
 
+//passing an array to a function
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
