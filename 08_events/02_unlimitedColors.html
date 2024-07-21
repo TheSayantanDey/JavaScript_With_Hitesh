@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="root" style="background-color: #212121;">
+    <h1 style="color: #fff;">Backround Color will change in every 1 second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const startBtn = document.getElementById('start');
+    const stopBtn = document.getElementById('stop');
+    const body = document.querySelector('#root');
+
+    let showTimeInInterval;
+    startBtn.addEventListener('click', ()=>{
+        console.log("Start Clicked")
+        showTimeInInterval = setInterval(()=>{
+            let randomHex = '#'+ Math.round(Math.random()*1000000);
+            console.log(`Random Hex Value : ${randomHex}`)
+            body.style.backgroundColor = `${randomHex}`;
+        }, 1000)
+    })
+
+    stopBtn.addEventListener('click', ()=>{
+        console.log("Stop Clicked")
+        clearInterval(showTimeInInterval);
+    })
+</script>
+</html>
